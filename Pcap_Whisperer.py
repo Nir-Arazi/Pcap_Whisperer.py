@@ -53,6 +53,6 @@ if check.returncode == 0:
     scan_test ()
 
 else:
-    subprocess.run (["sudo", "apt-get", "install", "snort" , "-y"])
+    subprocess.run (["sudo", "apt-get", "install", "snort" , "-y", "-qq"], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 
     scan_test ()
